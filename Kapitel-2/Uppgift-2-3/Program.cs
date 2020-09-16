@@ -15,7 +15,8 @@ namespace Uppgift_2_3
             double minLängd = double.Parse(Console.ReadLine());
 
             // Räkna ut skillnad till världsrekord
-            double skillnad = Math.Round(2.45 - minLängd, 2);
+            // @todo prova med Math.round()
+            double skillnad = 2.45 - minLängd;
 
             Console.WriteLine("Du är " + skillnad + " från världsrekordet i höjhopp 2,45 m.");
         }
