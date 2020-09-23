@@ -12,7 +12,7 @@ namespace Uppgift_3._4
         {
             // Läs in poäng
             Console.Write("Hur många poäng fick du på provet ? ");
-            string poäng = Console.ReadLine();
+            int poäng = int.Parse(Console.ReadLine());
 
             // Skriv ut betyg
             if (poäng >= 55)
