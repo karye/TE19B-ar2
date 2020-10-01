@@ -21,7 +21,7 @@ namespace GissaEttTal
                 if (gissning == slumptal)
                 {
                     Console.WriteLine("Rätt svar!");
-                    i = 5; // Knep för avsluta loopen!
+                    i = 5; // Knep för att avsluta loopen!
                 }
                 else
                 {
