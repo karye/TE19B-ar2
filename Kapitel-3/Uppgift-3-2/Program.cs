@@ -10,7 +10,7 @@ namespace Uppgift_3._2
     {
         static void Main(string[] args)
         {
-            // Läs in en text, (Usa)
+            // Läs in en text (Usa)
             Console.Write("Vem vann fotbolls-VM för damer 2015 ? ");
             string vinnare = Console.ReadLine();
 
