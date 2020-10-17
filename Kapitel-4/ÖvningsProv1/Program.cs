@@ -16,7 +16,8 @@ namespace ÖvningsProv1
             // Ställa frågan
             Console.WriteLine("Vad är x i formeln x * 6 = 42?");
 
-            // Läs in användarens svar tills hen matar in ett tal
+            // Läs in användarens svar 
+            // Om användaren inte matar in ett tal, fråga igen
             while (flagga == 0)
             {
                 // Läs in det användaren skriver
