@@ -14,6 +14,7 @@ namespace Exempel_1
             // städer[0] = "Stockholm"; // index = 0
             // städer[1] = "Paris";     // index = 1
             // städer[2] = "London";    // index = 2
+            Console.WriteLine($"Tre städer i Europa: {städer[0]}, {städer[1]}, {städer[2]}");
 
             // Alt 2: skapa en tom array på 2 strings
             string[] länder = new string[2];
