@@ -60,10 +60,10 @@ namespace Exempel_2
                     break;
 
                     case "2":
-                    Console.WriteLine("Ange två tal efter varnadra");
-                    double tal1 = double.Parse(Console.ReadLine());
-                    double tal2 = double.Parse(Console.ReadLine());
-                    Console.WriteLine($"{tal1} + {tal2} = " + (tal1 + tal2));
+                    Console.WriteLine("Ange två tal efter varandra");
+                    double tal3 = double.Parse(Console.ReadLine());
+                    double tal4 = double.Parse(Console.ReadLine());
+                    Console.WriteLine($"{tal3} + {tal4} = " + (tal3 + tal4));
                     break;
 
                     case "3":

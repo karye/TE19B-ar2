@@ -9,7 +9,7 @@ namespace Tilemap
             // Skapa en labyrint
             int[,] labyrint = {     //new int[5, 5] 
                 {1, 1, 1, 1, 1},    // y = 0
-                {0, 0, 0, 0, 1},    // y = 1
+                {0, 0, 0, 0, 0},    // y = 1
                 {1, 0, 1, 0, 1},    // y = 2
                 {1, 0, 1, 0, 0},    // y = 3
                 {1, 0, 1, 1, 1}     // y = 4

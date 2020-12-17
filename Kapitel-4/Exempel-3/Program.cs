@@ -21,7 +21,7 @@ namespace Exempel_3
             // användaren ska förstå att hen ska skriva "Micke"
             while (name != "Micke") // Så länge name inte lika med "Micke"
             {
-                Console.WriteLine("Skriv ditt namn:")
+                Console.WriteLine("Skriv ditt namn:");
                 name = Console.ReadLine();
             }
         }
