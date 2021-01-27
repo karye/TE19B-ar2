@@ -11,6 +11,8 @@ namespace Countries
             Console.WriteLine("Program för att hitta länder matchande sökterm.");
             Console.WriteLine("Program listar land och landskod.");
 
+            // @todo skapa variabel för filnamn
+
             // Läser in alla rader i textfilen, om den finns
             if (File.Exists("countries.csv"))
             {
