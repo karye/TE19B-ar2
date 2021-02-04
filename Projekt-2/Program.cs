@@ -41,7 +41,8 @@ namespace Projekt_2
             }
 
             // Huvudloopen
-            while (true)
+            string menyVal = "";
+            while (menyVal != "4")
             {
                 // Skriv ut huvudmenyn
                 Console.WriteLine("Välj ett alternativ");
@@ -49,9 +50,12 @@ namespace Projekt_2
                 Console.WriteLine("2. Lägg till/ändra bordsinformation");
                 Console.WriteLine("3. Markera bord tomt");
                 Console.WriteLine("4. Avsluta");
-                string menyVal = Console.ReadLine();
+                menyVal = Console.ReadLine();
 
                 // Hantera menyval
+                string antalGäster = "";
+                string bordNamn = "";
+                string bordNr = "";
                 switch (menyVal)
                 {
                     // Visa alla bord
@@ -68,14 +72,14 @@ namespace Projekt_2
                                 // Bordet har en bokning
                                 // Plocka namn och antal gäster
                                 string[] delar = bordsInformation[i].Split(',');
-                                string antalGäster = delar[0];
-                                string namn = delar[1];
+                                antalGäster = delar[0];
+                                bordNamn = delar[1];
 
                                 // Summera alla gäster
                                 totaltAntalGäster += int.Parse(antalGäster);
 
                                 // Skriv ut bokningsinfo
-                                Console.WriteLine($"Bord {i + 1} - Namn: {namn}, antal gäster: {antalGäster}");
+                                Console.WriteLine($"Bord {i + 1} - Namn: {bordNamn}, antal gäster: {antalGäster}");
                             }
                         }
 
@@ -84,6 +88,38 @@ namespace Projekt_2
                         break;
 
                     case "2":
+                        // Fråga bordsnr
+                        Console.WriteLine("Vilket bord vill du ändra på?");
+
+                        // Kontrollera att man matar bord 1-8
+                        while (true)
+                        {
+                            bordNr = Console.ReadLine();
+                            if (int.Parse(bordNr) <= 0 || int.Parse(bordNr) > antalBord)
+                            {
+                                Console.WriteLine("Icke giltigt bordsnummer, vg försök igen");
+                            } else
+                            {
+                                break;
+                            }
+                        }
+                        // @todo hantera inmatningsfel med tryParse()
+
+                        // Fråga namn
+                        Console.WriteLine("Ange ett namn");
+                        bordNamn = Console.ReadLine();
+
+                        // Fråga antal gäster
+                        Console.WriteLine("Ange antal gäster?");
+                        antalGäster = Console.ReadLine();
+                        // @todo Vad händer om man matar fel antal gäster
+
+                        // Spara i arrayen
+                        bordsInformation[int.Parse(bordNr) - 1] = $"{antalGäster},{bordNamn}";
+
+                        // Lagra i filen
+                        File.WriteAllLines(filnamn, bordsInformation);
+
                         break;
 
                     case "3":
