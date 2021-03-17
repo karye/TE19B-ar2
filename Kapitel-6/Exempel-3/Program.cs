@@ -11,16 +11,23 @@ namespace Exempel_3
             string omvändText = VändText("Programmering");
         }
 
-        // Metod för att summera två tal
-        // Returnerar ett heltal
+        /// <summary>
+        /// Metod för att summera två heltal
+        /// </summary>
+        /// <param name="x">Första heltalet</param>
+        /// <param name="y">Andra heltalet</param>
+        /// <returns>Summan</returns>
         static int Summera(int x, int y)
         {
             int z = x + y;
             return z;
         }
 
-        // Metod för att vända på en text
-        // Returnerar en string
+        /// <summary>
+        /// Metod för att vända på en text
+        /// </summary>
+        /// <param name="text">Text som skall vändas</param>
+        /// <returns>Omvända texten</returns>
         static string VändText(string text)
         {
             //...
